@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
+
+.col-1-3 {
+    width: 33%;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.inner-center {
+    padding: 0 15px;
+}
+
+.hide {
+    display: none;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+.titulo {
+    background: #1C1C1C;
+    line-height: 134px;
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.loadingscreen {
+    color: black;
+    font-size: 70px;
+    position: absolute;
+    top: calc(50%);
+    left: calc(50%);
+    transform: translate(-50%, -50%);
+    display: inline-block;
+}
