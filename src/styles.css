@@ -1,4 +1,29 @@
+:root {
+    --color_bg-1: #282923;
+    --color_bg-2: #181915;
+    --color_text-1: #86A59C;
+    --color_text-1-hover: #FFE1C6;
+}
+
+.main-color {
+    color: var(--color_text-1);
+}
+
+.main-color.hover:hover {
+    color: var(--color_text-1-hover);
+}
+
+.transition {
+    transition: all .2s ease-out;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
 body {
+    color: white;
+    background-color: var(--color_bg-1);
     margin: 0;
 }
 
@@ -40,6 +65,10 @@ img {
     opacity: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 .titulo {
     background: #1C1C1C;
     line-height: 134px;
@@ -49,7 +78,7 @@ img {
 }
 
 .loadingscreen {
-    color: black;
+    color: white;
     font-size: 70px;
     position: absolute;
     top: calc(50%);

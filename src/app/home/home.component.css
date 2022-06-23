@@ -1,0 +1,136 @@
+/* OVERALL CSS */
+
+#header .inner-padding {
+    padding: 29px 50px;
+}
+
+#sidebar {
+    display: inline-block;
+    position: fixed;
+    left: 40px;
+    bottom: 0;
+}
+
+#sidebar .vertical-bar {
+    margin: 0 auto;
+    width: 1px;
+    height: 100px;
+    background-color: var(--color_text-1);
+    max-height: calc( 100vh - 100px );
+    margin-top: 20px;
+}
+
+#sidebar a {
+    display: block;
+    font-size: 26px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+#sidebar .inner-padding > *:not(*:last-child) {
+    opacity: 0;
+}
+
+#content .inner-padding {
+    padding-left: 115px;
+}
+
+#content h1 {
+    margin-left: 50px;
+    font-size: 80px;
+}
+
+#content h1 span {
+    transition: all .3s;
+    display: inline-block;
+    color: var(--color_text-1);
+}
+
+/* ANIMATIONS */
+
+#content h1 span:hover {
+    color: var(--color_text-1-hover);
+    animation: .7s popLetter ease-in normal;
+}
+
+#sidebar .inner-padding > *:nth-child(1) {
+    animation: 1s fadeInUp 1.5s ease-out forwards;
+}
+
+#sidebar .inner-padding > *:nth-child(2) {
+    animation: 1s fadeInUp 1s ease-out forwards;
+}
+
+#sidebar .inner-padding > *:nth-child(3) {
+    animation: 1s fadeInUp .5s ease-out forwards;
+}
+
+#sidebar .inner-padding > *:nth-child(4) {
+    animation: 1s lineFadeInUp 0s ease-out forwards;
+}
+
+#sidebar a:hover i {
+    animation: scaleUp .3s ease-out forwards;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1.3, 1.3);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes lineFadeInUp {
+    0% {
+        transform: translate(0, 100px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes popLetter {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    30% {
+        transform: scale(1.2, 0.8);
+    }
+    
+    40% {
+        transform: scale(1.2, 0.8);
+    }
+    
+    50% {
+        transform: scale(0.8, 1.2);
+    }
+    
+    60% {
+        transform: scale(1.1, 0.9);
+    }
+    
+    80% {
+        transform: scale(0.9, 1.1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
