@@ -1,8 +1,27 @@
-/* OVERALL CSS */
+/* HEADER CSS */
 
 #header .inner-padding {
     padding: 29px 50px;
 }
+
+#header .div_buttons span {
+    font-family: JosefinSans;
+    cursor: pointer;
+    position: relative;
+    margin: 0 15px;
+}
+
+#header .div_buttons span .underline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    transition: all .2s;
+    background-color: var(--color_text-1-hover);
+}
+
+/* SIDEBAR CSS */
 
 #sidebar {
     display: inline-block;
@@ -31,26 +50,51 @@
     opacity: 0;
 }
 
+/* CONTENT CSS */
+
+#content {
+    scroll-snap-type: y mandatory;
+}
+
+#content section {
+    scroll-snap-align: start;
+}
+
 #content .inner-padding {
     padding-left: 115px;
 }
 
-#content h1 {
-    margin-left: 50px;
-    font-size: 80px;
+#content section#page1 {
+    /* HEIGHT = SCREEN'S HEIGHT - HEADER'S HEIGHT */
+    height: calc( 100vh - 76px );
 }
 
-#content h1 span {
-    transition: all .3s;
+#content section#page1 h1 {
+    margin-left: 50px;
+    font-size: 60px;
+    font-family: JosefinSans;
+    font-weight: 900;
+    margin-top: 0;
+}
+
+#content section#page1 h1 span {
+    transition: all .5s;
     display: inline-block;
     color: var(--color_text-1);
 }
 
+#content section#page2 {
+    background-color: var(--color_bg-2);
+}
+
 /* ANIMATIONS */
 
-#content h1 span:hover {
+#content section#page1 h1 span:hover {
     color: var(--color_text-1-hover);
-    animation: .7s popLetter ease-in normal;
+}
+
+#content section#page1 h1 span.animating {
+    animation: 1s popLetter ease-in normal;
 }
 
 #sidebar .inner-padding > *:nth-child(1) {
@@ -71,6 +115,10 @@
 
 #sidebar a:hover i {
     animation: scaleUp .3s ease-out forwards;
+}
+
+#header .div_buttons span:hover .underline {
+    animation: .2s underlineFade 0s linear forwards;
 }
 
 @keyframes scaleUp {
@@ -111,26 +159,36 @@
     }
 
     30% {
-        transform: scale(1.2, 0.8);
+        transform: scale(1.3, 0.8);
     }
     
     40% {
-        transform: scale(1.2, 0.8);
+        transform: scale(1.3, 0.8);
     }
     
     50% {
-        transform: scale(0.8, 1.2);
+        transform: scale(0.8, 1.3);
     }
     
     60% {
-        transform: scale(1.1, 0.9);
+        transform: scale(1.15, 0.9);
     }
     
     80% {
-        transform: scale(0.9, 1.1);
+        transform: scale(0.9, 1.15);
     }
 
     100% {
         transform: scale(1, 1);
+    }
+}
+
+@keyframes underlineFade {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
     }
 }

@@ -1,3 +1,18 @@
+@font-face {
+    font-family: PermanentMarker;
+    src: url(assets/Fonts/Permanent_Marker/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: IndieFlower;
+    src: url(assets/Fonts/Indie_Flower/IndieFlower-Regular.ttf);
+}
+
+@font-face {
+    font-family: JosefinSans;
+    src: url(assets/Josefin_Sans/static/JosefinSans-Bold.ttf);
+}
+
 :root {
     --color_bg-1: #282923;
     --color_bg-2: #181915;
@@ -5,26 +20,18 @@
     --color_text-1-hover: #FFE1C6;
 }
 
-.main-color {
-    color: var(--color_text-1);
-}
-
-.main-color.hover:hover {
-    color: var(--color_text-1-hover);
-}
-
-.transition {
-    transition: all .2s ease-out;
-}
-
 * {
     scroll-behavior: smooth;
 }
 
 body {
-    color: white;
+    color: var(--color_text-1);
     background-color: var(--color_bg-1);
     margin: 0;
+}
+
+section {
+    height: 100vh;
 }
 
 img {
@@ -86,3 +93,21 @@ a {
     transform: translate(-50%, -50%);
     display: inline-block;
 }
+
+.main-color {
+    color: var(--color_text-1);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color_text-1);
+}
+
+.hover:hover {
+    color: var(--color_text-1-hover);
+}
+
+.transition {
+    transition: all .2s ease-out;
+}
+
