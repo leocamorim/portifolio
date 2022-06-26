@@ -6,18 +6,20 @@ header .inner-padding {
 
 header .logo {
     width: 47px;
+    opacity: 0;
 }
 
 .header {
     height: 42px;
 }
 
-header .div_buttons span  {
+header .div_buttons>* {
     font-family: JosefinSans;
     cursor: pointer;
     position: relative;
     margin: 0 15px;
     opacity: 0;
+    display: inline-block;
 }
 
 header .div_buttons span .underline {
@@ -32,56 +34,49 @@ header .div_buttons span .underline {
 
 /* SIDEBAR CSS */
 
-#sidebar-left {
+.sidebar {
     display: inline-block;
     position: fixed;
-    left: 40px;
     bottom: 0;
 }
 
-#sidebar-left .vertical-bar {
+#sidebar-left {
+    left: 40px;
+}
+
+#sidebar-right {
+    right: 40px;
+}
+
+.sidebar .vertical-bar {
     margin: 0 auto;
     width: 1px;
     height: 100px;
     background-color: var(--color_text-1);
-    max-height: calc( 100vh - 100px );
+    max-height: calc(100vh - 100px);
     margin-top: 20px;
     transform: translate(0, 100px);
 }
 
-#sidebar-left a {
+.sidebar a {
     display: block;
     font-size: 26px;
     padding: 5px;
     margin-bottom: 15px;
 }
 
-#sidebar-left .inner-padding > *:not(*:last-child) {
+.sidebar .inner-padding>*:not(*:last-child) {
     opacity: 0;
+}
+
+#sidebar-right a {
+    writing-mode: vertical-rl;
 }
 
 /* CONTENT CSS */
 
-#content {
-    scroll-snap-type: y mandatory;
-}
-
-#content section {
-    scroll-snap-align: start;
-}
-
-
-#content section#page1 .content p {
-    font-size: 21px;
-    max-width: 800px;
-    text-align: justify;
-    margin-left: 5px;
-}
-
-#content section#page1 .content button.bt-main {
-    margin-top: 25px;
-    margin-left: 5px;
-    padding: 15px 50px;
+#content section#page1 .content {
+    padding-top: calc(50vh - 340px);
 }
 
 #content span.salutation {
@@ -90,6 +85,8 @@ header .div_buttons span .underline {
     margin-left: 5px;
     font-size: 25px;
     color: var(--color_text-1-hover);
+    opacity: 0;
+    animation: .2s fadeInUp forwards ease-out;
 }
 
 #content section#page1 h1 {
@@ -97,12 +94,31 @@ header .div_buttons span .underline {
     font-family: JosefinSans;
     font-weight: 900;
     margin: 0;
+    opacity: 0;
+    animation: .2s fadeInUp forwards ease-out;
 }
 
 #content section#page1 h1 span {
     transition: all .5s;
     display: inline-block;
     color: var(--color_text-1);
+}
+
+#content section#page1 .content p {
+    font-size: 21px;
+    max-width: 800px;
+    text-align: justify;
+    margin-left: 5px;
+    opacity: 0;
+    animation: .2s fadeInUp forwards ease-out;
+}
+
+#content section#page1 .content button.bt-main {
+    margin-top: 25px;
+    margin-left: 5px;
+    padding: 15px 50px;
+    opacity: 0;
+    animation: .2s fadeInUp forwards ease-out;
 }
 
 #content section#page2 {
@@ -113,30 +129,32 @@ header .div_buttons span .underline {
 
 /* FADE IN HEADER LOGO */
 header .logo {
-    animation: .5s opacityFade 0s ease-out forwards;
+    animation: .5s opacityFade ease-out forwards;
 }
 
 /* FADE IN HEADER BUTTONS */
-header .div_buttons span {
-    animation: 0.5s fadeInLeft 0.5s ease-out forwards;
+header .div_buttons>* {
+    animation: 0.5s fadeInLeft ease-out forwards;
 }
 
-/* FADE IN  */
-#sidebar-left .inner-padding > *:nth-child(4) {
-    animation: 1s lineFadeInUp 2s ease-out forwards;
+/* FADE IN SIDEBAR */
+
+.sidebar .inner-padding>* {
+    animation: 1s fadeInUp ease-out forwards;
 }
 
-#sidebar-left .inner-padding > *:nth-child(3) {
-    animation: 1s fadeInUp 2.5s ease-out forwards;
+/* FADE IN SIDEBAR LEFT BAR */
+#sidebar-left .inner-padding>*:nth-child(4) {
+    animation: 1s lineFadeInUp ease-out forwards;
 }
 
-#sidebar-left .inner-padding > *:nth-child(2) {
-    animation: 1s fadeInUp 3s ease-out forwards;
+/* FADE IN SIDEBAR RIGHT BAR */
+
+#sidebar-right .inner-padding>*:nth-child(2) {
+    animation: 1s lineFadeInUp ease-out forwards;
 }
 
-#sidebar-left .inner-padding > *:nth-child(1) {
-    animation: 1s fadeInUp 3.5s ease-out forwards;
-}
+/* INTERACTION ANIMATIONS */
 
 #sidebar-left a:hover i {
     transform: scale(1.2, 1.2);
@@ -185,7 +203,7 @@ header .div_buttons span:hover .underline {
 @keyframes fadeInLeft {
     0% {
         opacity: 0;
-        transform: translate(15px, 0);
+        transform: translate(25px, 0);
     }
 
     100% {
@@ -212,19 +230,19 @@ header .div_buttons span:hover .underline {
     30% {
         transform: scale(1.3, 0.8);
     }
-    
+
     40% {
         transform: scale(1.3, 0.8);
     }
-    
+
     50% {
         transform: scale(0.8, 1.3);
     }
-    
+
     60% {
         transform: scale(1.15, 0.9);
     }
-    
+
     80% {
         transform: scale(0.9, 1.15);
     }
