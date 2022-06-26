@@ -1,17 +1,26 @@
 /* HEADER CSS */
 
-#header .inner-padding {
+header .inner-padding {
     padding: 29px 50px;
 }
 
-#header .div_buttons span {
+header .logo {
+    width: 47px;
+}
+
+.header {
+    height: 42px;
+}
+
+header .div_buttons span  {
     font-family: JosefinSans;
     cursor: pointer;
     position: relative;
     margin: 0 15px;
+    opacity: 0;
 }
 
-#header .div_buttons span .underline {
+header .div_buttons span .underline {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -23,30 +32,31 @@
 
 /* SIDEBAR CSS */
 
-#sidebar {
+#sidebar-left {
     display: inline-block;
     position: fixed;
     left: 40px;
     bottom: 0;
 }
 
-#sidebar .vertical-bar {
+#sidebar-left .vertical-bar {
     margin: 0 auto;
     width: 1px;
     height: 100px;
     background-color: var(--color_text-1);
     max-height: calc( 100vh - 100px );
     margin-top: 20px;
+    transform: translate(0, 100px);
 }
 
-#sidebar a {
+#sidebar-left a {
     display: block;
     font-size: 26px;
     padding: 5px;
     margin-bottom: 15px;
 }
 
-#sidebar .inner-padding > *:not(*:last-child) {
+#sidebar-left .inner-padding > *:not(*:last-child) {
     opacity: 0;
 }
 
@@ -60,21 +70,33 @@
     scroll-snap-align: start;
 }
 
-#content .inner-padding {
-    padding-left: 115px;
+
+#content section#page1 .content p {
+    font-size: 21px;
+    max-width: 800px;
+    text-align: justify;
+    margin-left: 5px;
 }
 
-#content section#page1 {
-    /* HEIGHT = SCREEN'S HEIGHT - HEADER'S HEIGHT */
-    height: calc( 100vh - 76px );
+#content section#page1 .content button.bt-main {
+    margin-top: 25px;
+    margin-left: 5px;
+    padding: 15px 50px;
+}
+
+#content span.salutation {
+    display: block;
+    margin-bottom: 25px;
+    margin-left: 5px;
+    font-size: 25px;
+    color: var(--color_text-1-hover);
 }
 
 #content section#page1 h1 {
-    margin-left: 50px;
-    font-size: 60px;
+    font-size: 80px;
     font-family: JosefinSans;
     font-weight: 900;
-    margin-top: 0;
+    margin: 0;
 }
 
 #content section#page1 h1 span {
@@ -89,36 +111,53 @@
 
 /* ANIMATIONS */
 
-#content section#page1 h1 span:hover {
-    color: var(--color_text-1-hover);
+/* FADE IN HEADER LOGO */
+header .logo {
+    animation: .5s opacityFade 0s ease-out forwards;
+}
+
+/* FADE IN HEADER BUTTONS */
+header .div_buttons span {
+    animation: 0.5s fadeInLeft 0.5s ease-out forwards;
+}
+
+/* FADE IN  */
+#sidebar-left .inner-padding > *:nth-child(4) {
+    animation: 1s lineFadeInUp 2s ease-out forwards;
+}
+
+#sidebar-left .inner-padding > *:nth-child(3) {
+    animation: 1s fadeInUp 2.5s ease-out forwards;
+}
+
+#sidebar-left .inner-padding > *:nth-child(2) {
+    animation: 1s fadeInUp 3s ease-out forwards;
+}
+
+#sidebar-left .inner-padding > *:nth-child(1) {
+    animation: 1s fadeInUp 3.5s ease-out forwards;
+}
+
+#sidebar-left a:hover i {
+    transform: scale(1.2, 1.2);
+}
+
+header .div_buttons span:hover .underline {
+    animation: .2s underlineFade 0s linear forwards;
 }
 
 #content section#page1 h1 span.animating {
     animation: 1s popLetter ease-in normal;
 }
 
-#sidebar .inner-padding > *:nth-child(1) {
-    animation: 1s fadeInUp 1.5s ease-out forwards;
-}
+@keyframes opacityFade {
+    0% {
+        opacity: 0;
+    }
 
-#sidebar .inner-padding > *:nth-child(2) {
-    animation: 1s fadeInUp 1s ease-out forwards;
-}
-
-#sidebar .inner-padding > *:nth-child(3) {
-    animation: 1s fadeInUp .5s ease-out forwards;
-}
-
-#sidebar .inner-padding > *:nth-child(4) {
-    animation: 1s lineFadeInUp 0s ease-out forwards;
-}
-
-#sidebar a:hover i {
-    animation: scaleUp .3s ease-out forwards;
-}
-
-#header .div_buttons span:hover .underline {
-    animation: .2s underlineFade 0s linear forwards;
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes scaleUp {
@@ -135,6 +174,18 @@
     0% {
         opacity: 0;
         transform: translate(0, 15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translate(15px, 0);
     }
 
     100% {

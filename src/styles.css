@@ -1,16 +1,6 @@
 @font-face {
-    font-family: PermanentMarker;
-    src: url(assets/Fonts/Permanent_Marker/PermanentMarker-Regular.ttf);
-}
-
-@font-face {
-    font-family: IndieFlower;
-    src: url(assets/Fonts/Indie_Flower/IndieFlower-Regular.ttf);
-}
-
-@font-face {
     font-family: JosefinSans;
-    src: url(assets/Josefin_Sans/static/JosefinSans-Bold.ttf);
+    src: url(assets/Josefin_Sans/static/JosefinSans-Regular.ttf);
 }
 
 :root {
@@ -22,6 +12,7 @@
 
 * {
     scroll-behavior: smooth;
+    font-family: JosefinSans;
 }
 
 body {
@@ -31,7 +22,11 @@ body {
 }
 
 section {
-    height: 100vh;
+    height: calc( 100vh - 100px );
+    width: calc( 100vw - 240px );
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 img {
@@ -98,6 +93,10 @@ a {
     color: var(--color_text-1);
 }
 
+.main-color-hover {
+    color: var(--color_text-1-hover);
+}
+
 a {
     text-decoration: none;
     color: var(--color_text-1);
@@ -111,3 +110,20 @@ a {
     transition: all .2s ease-out;
 }
 
+.bt-main {
+    font-family: JosefinSans;
+    background-color: transparent;
+    border: 2px solid var(--color_text-1);
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: var(--color_text-1);
+    font-size: 16px;
+    transition: all .2s;
+}
+
+.bt-main:hover {
+    cursor: pointer;
+    border-color: var(--color_text-1-hover);
+    background-color: var(--color_text-1-hover);
+    color: var(--color_bg-1);
+}
