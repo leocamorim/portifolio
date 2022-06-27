@@ -1,5 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
-let $: any;
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +8,7 @@ let $: any;
 export class HomeComponent implements OnInit {
 
   initAnimationDelays = [
+    // HEADER
     {
       name: "Header Logo",
       selector: ".logo",
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     },
     {
       name: "Header - Button Resume",
-      selector: "header button.bt-main",
+      selector: "header .div_buttons > a",
       delay: 0.2
     },
     {
@@ -34,10 +34,11 @@ export class HomeComponent implements OnInit {
       selector: "header .about",
       delay: 0.2
     },
+    // CONTENT
     {
       name: "Section 1 - Salutation",
       selector: "#page1 .salutation",
-      delay: 0.3
+      delay: 0.5
     },
     {
       name: "Section 1 - H1",
@@ -54,6 +55,7 @@ export class HomeComponent implements OnInit {
       selector: "#page1 button",
       delay: 0.2
     },
+    // SIDEBAR LEFT
     {
       name: "Left Sidebar - Vertical Bar",
       selector: "#sidebar-left .vertical-bar",
@@ -62,7 +64,7 @@ export class HomeComponent implements OnInit {
     {
       name: "Left Sidebar - Curriculum",
       selector: "#sidebar-left .curriculum",
-      delay: 0.5
+      delay: 0.8
     },
     {
       name: "Left Sidebar - Github",
@@ -74,6 +76,7 @@ export class HomeComponent implements OnInit {
       selector: "#sidebar-left .linkedin",
       delay: 0.2
     },
+    // SIDEBAR RIGHT
     {
       name: "Right Sidebar - Vertical Bar",
       selector: "#sidebar-right .vertical-bar",
@@ -82,7 +85,7 @@ export class HomeComponent implements OnInit {
     {
       name: "Right Sidebar - Email",
       selector: "#sidebar-right a",
-      delay: 0.5
+      delay: 0.8
     },
   ]
 

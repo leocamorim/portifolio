@@ -5,7 +5,7 @@ header .inner-padding {
 }
 
 header .logo {
-    width: 47px;
+    width: 56px;
     opacity: 0;
 }
 
@@ -90,7 +90,7 @@ header .div_buttons span .underline {
 }
 
 #content section#page1 h1 {
-    font-size: 80px;
+    font-size: 70px;
     font-family: JosefinSans;
     font-weight: 900;
     margin: 0;
@@ -111,6 +111,7 @@ header .div_buttons span .underline {
     margin-left: 5px;
     opacity: 0;
     animation: .2s fadeInUp forwards ease-out;
+    line-height: 30px;
 }
 
 #content section#page1 .content button.bt-main {
@@ -137,20 +138,20 @@ header .div_buttons>* {
     animation: 0.5s fadeInLeft ease-out forwards;
 }
 
+/*  */
+
+#content span.salutation {
+    animation: .2s fadeInUp ease-out forwards;
+}
+
 /* FADE IN SIDEBAR */
 
 .sidebar .inner-padding>* {
     animation: 1s fadeInUp ease-out forwards;
 }
 
-/* FADE IN SIDEBAR LEFT BAR */
-#sidebar-left .inner-padding>*:nth-child(4) {
-    animation: 1s lineFadeInUp ease-out forwards;
-}
-
-/* FADE IN SIDEBAR RIGHT BAR */
-
-#sidebar-right .inner-padding>*:nth-child(2) {
+/* FADE IN SIDEBARS VERTICAL BARS */
+#sidebar-left .inner-padding>*:nth-child(4), #sidebar-right .inner-padding>*:nth-child(2) {
     animation: 1s lineFadeInUp ease-out forwards;
 }
 
