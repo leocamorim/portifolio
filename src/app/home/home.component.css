@@ -167,7 +167,7 @@ header .div_buttons>* {
 }
 
 #sidebar-right a:hover p {
-    transform: scale(1.05, 1.05) translate(1px, -15px);
+    transform: scale(1.05, 1.05) translate(1px, -5px);
 }
 
 header .div_buttons span:hover .underline {
