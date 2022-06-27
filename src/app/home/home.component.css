@@ -73,6 +73,10 @@ header .div_buttons span .underline {
     writing-mode: vertical-rl;
 }
 
+#sidebar-right a p {
+    transition: all .2s;
+}
+
 /* CONTENT CSS */
 
 #content section#page1 .content {
@@ -151,7 +155,8 @@ header .div_buttons>* {
 }
 
 /* FADE IN SIDEBARS VERTICAL BARS */
-#sidebar-left .inner-padding>*:nth-child(4), #sidebar-right .inner-padding>*:nth-child(2) {
+#sidebar-left .inner-padding>*:nth-child(4),
+#sidebar-right .inner-padding>*:nth-child(2) {
     animation: 1s lineFadeInUp ease-out forwards;
 }
 
@@ -159,6 +164,10 @@ header .div_buttons>* {
 
 #sidebar-left a:hover i {
     transform: scale(1.2, 1.2);
+}
+
+#sidebar-right a:hover p {
+    transform: scale(1.05, 1.05) translate(1px, -15px);
 }
 
 header .div_buttons span:hover .underline {
