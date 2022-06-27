@@ -79,6 +79,10 @@ header .div_buttons span .underline {
 
 /* CONTENT CSS */
 
+#content section#page1 {
+    height: calc( 100vh - 100px );
+}
+
 #content section#page1 .content {
     padding-top: calc(50vh - 340px);
 }
