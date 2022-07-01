@@ -14,11 +14,7 @@ export class HomeComponent implements OnInit {
       selector: "#page1 .salutation",
       delay: 0.5
     },
-    // {
-    //   name: "Section 1 - H1",
-    //   selector: "#page1 h1",
-    //   delay: 0.2
-    // },
+    //   H1 ANIMATION",
     {
       name: "Section 1 - Text",
       selector: "#page1 p",

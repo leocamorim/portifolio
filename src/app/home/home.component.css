@@ -9,6 +9,14 @@ header .logo {
     opacity: 0;
 }
 
+header .logo a img {
+    transition: all .2s;
+}
+
+header .logo a:hover img, header .logo a:focus img {
+    transform: scale(1.2, 1.2);
+}
+
 .header {
     height: 42px;
 }
