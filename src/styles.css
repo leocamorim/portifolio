@@ -3,6 +3,16 @@
     src: url(assets/Josefin_Sans/static/JosefinSans-Regular.ttf);
 }
 
+@font-face {
+    font-family: MajorMonoDisplay;
+    src: url(assets/Fonts/Major_Mono_Display/MajorMonoDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: NovaMono;
+    src: url(assets/Fonts/Nova_Mono/NovaMono-Regular.ttf);
+}
+
 :root {
     --color_bg-1: #282923;
     --color_bg-2: #181915;

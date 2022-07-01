@@ -8,6 +8,27 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   initAnimationDelays = [
+     // CONTENT
+    {
+      name: "Section 1 - Salutation",
+      selector: "#page1 .salutation",
+      delay: 0.5
+    },
+    // {
+    //   name: "Section 1 - H1",
+    //   selector: "#page1 h1",
+    //   delay: 0.2
+    // },
+    {
+      name: "Section 1 - Text",
+      selector: "#page1 p",
+      delay: 6.7
+    },
+    {
+      name: "Section 1 - Button",
+      selector: "#page1 button",
+      delay: 0.2
+    },
     // HEADER
     {
       name: "Header Logo",
@@ -32,27 +53,6 @@ export class HomeComponent implements OnInit {
     {
       name: "Header - About",
       selector: "header .about",
-      delay: 0.2
-    },
-    // CONTENT
-    {
-      name: "Section 1 - Salutation",
-      selector: "#page1 .salutation",
-      delay: 0.5
-    },
-    {
-      name: "Section 1 - H1",
-      selector: "#page1 h1",
-      delay: 0.2
-    },
-    {
-      name: "Section 1 - Text",
-      selector: "#page1 p",
-      delay: 0.2
-    },
-    {
-      name: "Section 1 - Button",
-      selector: "#page1 button",
       delay: 0.2
     },
     // SIDEBAR LEFT

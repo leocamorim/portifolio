@@ -99,14 +99,57 @@ header .div_buttons span .underline {
 
 #content section#page1 h1 {
     font-size: 70px;
-    font-family: JosefinSans;
     font-weight: 900;
     margin: 0;
+    /* opacity: 0; */
+    /* animation: .2s fadeInUp forwards ease-out; */
+    position: relative;
+    display: inline-block;
+}
+
+#content section#page1 h1 span.over {
+    position: absolute;
+    top: -3px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color_bg-1);
+}
+
+#content section#page1 h1.name span.over {
+    animation: fadeInTyper 2s steps(16) 1.7s forwards;
+}
+
+#content section#page1 h1.role span.over {
+    animation: fadeInTyper 2s steps(20) 4.7s forwards;
+}
+
+#content section#page1 h1 span.blinker {
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: .3em;
+    left: 0;
+    width: .6em;
+    height: .1em;
     opacity: 0;
-    animation: .2s fadeInUp forwards ease-out;
+}
+
+#content section#page1 h1.name span.blinker {
+    animation: fadeInTyper 2s steps(16) 1.7s forwards,
+    opacityFade .5s steps(2) .7s infinite,
+    blinkerFadeOut .1s linear 3.7s forwards;
+}
+
+#content section#page1 h1.role span.blinker {
+    background-color: transparent;
+    animation: fadeInTyper 2s steps(20) 4.7s forwards,
+    opacityFade .5s steps(2) 3.7s infinite,
+    blinkerFadeIn .1s linear 3.7s forwards;
 }
 
 #content section#page1 h1 span {
+    font-family: NovaMono;
     transition: all .5s;
     display: inline-block;
     color: var(--color_text-1);
@@ -135,6 +178,14 @@ header .div_buttons span .underline {
 }
 
 /* ANIMATIONS */
+
+/* TYPER ANIMATION */
+
+@keyframes fadeInTyper {
+    to {
+        left: 100%;
+    }
+}
 
 /* FADE IN HEADER LOGO */
 header .logo {
@@ -183,12 +234,28 @@ header .div_buttons span:hover .underline {
 }
 
 @keyframes opacityFade {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
+    to {
         opacity: 1;
+    }
+}
+
+@keyframes blinkerFadeIn {
+    from {
+        background-color: transparent;
+    }
+    
+    to {
+        background-color: white;
+    }
+}
+
+@keyframes blinkerFadeOut {
+    from {
+        background-color: white;
+    }
+    
+    to {
+        background-color: transparent;
     }
 }
 
