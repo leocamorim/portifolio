@@ -131,7 +131,7 @@ a {
     transition: all .2s;
 }
 
-.bt-main:hover {
+.bt-main:hover, .bt-main:focus, a:focus .bt-main {
     cursor: pointer;
     border-color: var(--color_text-1-hover);
     background-color: var(--color_text-1-hover);

@@ -217,15 +217,15 @@ header .div_buttons>* {
 
 /* INTERACTION ANIMATIONS */
 
-#sidebar-left a:hover i {
+#sidebar-left a:hover i, #sidebar-left a:focus i {
     transform: scale(1.2, 1.2);
 }
 
-#sidebar-right a:hover p {
+#sidebar-right a:hover p, #sidebar-right a:focus p {
     transform: scale(1.05, 1.05) translate(1px, -5px);
 }
 
-header .div_buttons span:hover .underline {
+header .div_buttons span:hover .underline, header .div_buttons span a:focus .underline {
     width: 100%;
 }
 
