@@ -36,21 +36,21 @@ export class HomeComponent implements OnInit {
       selector: "header .div_buttons > a",
       delay: 0.2
     },
-    {
-      name: "Header - Contact",
-      selector: "header .contact",
-      delay: 0.2
-    },
-    {
-      name: "Header - Experience",
-      selector: "header .experience",
-      delay: 0.2
-    },
-    {
-      name: "Header - About",
-      selector: "header .about",
-      delay: 0.2
-    },
+    // {
+    //   name: "Header - Contact",
+    //   selector: "header .contact",
+    //   delay: 0.2
+    // },
+    // {
+    //   name: "Header - Experience",
+    //   selector: "header .experience",
+    //   delay: 0.2
+    // },
+    // {
+    //   name: "Header - About",
+    //   selector: "header .about",
+    //   delay: 0.2
+    // },
     // SIDEBAR LEFT
     {
       name: "Left Sidebar - Vertical Bar",
